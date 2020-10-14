@@ -14,11 +14,11 @@ describe("Visitor can see interface", () => {
     cy.get('[data-cy="header"]').should("contain", "viaplay");
   });
 
-  it("shows first picture", () => {
-    cy.get('[data-cy="picture-1"]').should("be.visible");
+  it("shows second picture", () => {
+    cy.get('[data-cy="movie-Paradise Hotel"]').should("be.visible");
   });
 
-  it("shows second picture", () => {
-    cy.get('[data-cy="picture-2"]').should("be.visible");
+  it("shows forth picture", () => {
+    cy.get('[data-cy="movie-Hawaii Five-0"]').should("be.visible");
   });
 });

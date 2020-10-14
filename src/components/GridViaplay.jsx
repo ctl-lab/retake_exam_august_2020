@@ -21,7 +21,7 @@ const GridViaplay = () => {
       {movies.map((movie) => {
         return(
           <div class="display-show">
-            <img src={movie.content.images.landscape.url} alt="pic"/>
+            <img data-cy={"movie-" + movie.content.series.title} src={movie.content.images.landscape.url} alt="pic"/>
           </div>
         )
       })}
