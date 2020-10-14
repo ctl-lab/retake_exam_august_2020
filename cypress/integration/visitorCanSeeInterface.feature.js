@@ -11,7 +11,7 @@ describe("Visitor can see interface", () => {
   });
 
   it("visitor can see viaplay title", () => {
-    cy.get('[data-cy="header"]').should("contain", "viaplay");
+    cy.get('[data-cy="header"]').should("be.visible");
   });
 
   it("shows second picture", () => {

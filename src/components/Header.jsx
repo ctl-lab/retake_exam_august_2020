@@ -2,12 +2,12 @@ import React from "react";
 import { Menu } from "semantic-ui-react";
 
 const Header = () => {
-
   return (
     <Menu inverted>
       <Menu.Item>
-        <h1 data-cy="header">viaplay</h1>
+        <img data-cy="header" src="https://kundservice.viaplay.se/wp-content/themes/viaplaycs/assets/dist/images/viaplay_white.svg" alt="logo"/>
       </Menu.Item>
+
     </Menu>
   );
 };
