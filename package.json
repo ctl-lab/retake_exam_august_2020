@@ -11,14 +11,17 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.0"
+    "semantic-ui-react": "^2.0.0",
+    "start-server-and-test": "^1.11.5"
   },
   "scripts": {
-    "start": "PORT=3000 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:open": "yarn start --silent & cypress open"
+    "start:silent": "BROWSER=none react-scripts start",
+    "cy:open": "cypress open",
+    "cypress": "start-server-and-test start:silent http://localhost:3000/ cy:open"
   },
   "eslintConfig": {
     "extends": "react-app"
