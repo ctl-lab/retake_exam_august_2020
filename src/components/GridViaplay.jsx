@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Movies } from '../Modules/movies'
-
+import { Movies } from "../Modules/movies";
 
 const GridViaplay = () => {
   const [movies, setMovies] = useState([]);
@@ -12,24 +11,21 @@ const GridViaplay = () => {
     getMoviesIndex();
   }, []);
 
-
-
-
-
   return (
-    <div >
+    <div data-cy="grid-container">
       {movies.map((movie) => {
-        return(
+        return (
           <div class="display-show">
-            <img data-cy={"movie-" + movie.content.series.title} src={movie.content.images.landscape.url} alt="pic"/>
+            <img
+              data-cy={"movie-" + movie.content.series.title}
+              src={movie.content.images.landscape.url}
+              alt="pic"
+            />
           </div>
-        )
+        );
       })}
-
-
     </div>
-  )
-}
+  );
+};
 
-export default GridViaplay
-
+export default GridViaplay;

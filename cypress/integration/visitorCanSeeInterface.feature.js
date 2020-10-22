@@ -21,4 +21,8 @@ describe("Visitor can see interface", () => {
   it("shows forth picture", () => {
     cy.get('[data-cy="movie-Hawaii Five-0"]').should("be.visible");
   });
+
+  it("10 images get rendered", () => {
+    cy.get('[data-cy="grid-container"]').children().should("have.length", 10);
+  });
 });
